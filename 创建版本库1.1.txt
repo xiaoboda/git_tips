@@ -1,0 +1,25 @@
+版本库又名仓库，英文名repository，这个仓库里面所有文件都可以被Git管理起来。
+创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/wangpengbo/learngit
+pwd命令用于显示当前目录。
+
+第二步，通过git init命令把这个目录变成Git可以管理的仓库：
+$ git init
+Initialized empty Git repository in /Users/wangpengbo/learngit/.git/
+现在这是一个空的仓库。可以通过ls -ah命令看到隐藏的.git目录。
+
+用一个编辑器创建一个文本文件，一定要将文件放到learngit目录下（子目录也行），才能被Git管理。
+把一个文件放到Git仓库只需要两步。
+第一步，用命令git add告诉Git，把文件添加到仓库：
+$ git add readme.txt
+第二步，用命令git commit告诉Git，把文件提交到仓库：
+$ git commit -m "wrote a readme file"
+简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。
+
+ 为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "add 3 files."
