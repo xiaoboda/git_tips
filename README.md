@@ -12,4 +12,5 @@ This is what I note when I learn Git.
 2.修改最上面那行黄色合并信息,可以不修改<br>
 3.按键盘左上角"Esc"<br>
 4.输入":wq",注意是冒号+wq,按回车键即可<br>
+
 try
